@@ -4,15 +4,16 @@ import { registerController } from '../controllers/authControllers.js';
 
 const router = express.Router();
 
-//Routes for register new user, log in and reset password(?)
+//Route for register new user
 
 router.post(
   '/register',
   validateCredentials,
   validateNewUser,
   registerController
-); //Registrera en ny användare
+);
 
+//Route for log in
 router.post('/login', validateCredentials, (req, res, next) => {}); //Logga in och få en JWT-token
 
 export default router;
