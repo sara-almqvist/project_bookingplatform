@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { isText } from '../utils/validate.js';
+import { isText } from '../utils/helpfunctions.js';
 
 export function validateCredentials(req, res, next) {
   const { username, password } = req.body ?? {};
